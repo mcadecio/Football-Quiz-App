@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#448AFF</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#757575</item>
+        <item name="android:divider">#BDBDBD</item>
+        <item name="colorButtonNormal">#3F51B5</item>
+    </style>
+
+    <!-- CardView style-->
+    <style name="cardView">
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <!-- Question Titles style-->
+    <style name="questionTitle">
+        <item name="android:padding">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="secondaryText">
+        <item name="android:padding">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="answers">
+        <item name="android:padding">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+</resources>

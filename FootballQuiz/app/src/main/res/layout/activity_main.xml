@@ -1,0 +1,328 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+
+
+    <!-- First question card-->
+    <android.support.v7.widget.CardView
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/card_view"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    style="@style/cardView"
+
+card_view:cardCornerRadius="4dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/questionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question 1. Who won last year's Premier League?"/>
+
+    <EditText
+        style="@style/secondaryText"
+        android:id="@+id/qone_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="textPersonName"
+        android:imeOptions="actionDone"
+        android:hint="Type your answer Here!!!"/>
+
+    <TextView
+        style="@style/answers"
+        android:id="@+id/firstAnswer_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="Chelsea"/>
+
+</LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
+    <!-- Second question card-->
+    <android.support.v7.widget.CardView
+        style="@style/cardView"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_vie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/questionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 2. Who does Pogba play for?"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/secondaryText">
+
+            <CheckBox
+                android:id="@+id/manu_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manchester United"
+                android:onClick="setManUCheckBox"/>
+            <CheckBox
+                android:id="@+id/manC_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manchester City"
+                android:onClick="setManCCheckBox"/>
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                style="@style/secondaryText">
+
+                <CheckBox
+                    android:id="@+id/juve_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Juventus"
+                    android:onClick="setJuveCheckBox"/>
+                <CheckBox
+                    android:id="@+id/none_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="None"
+                    android:onClick="setNoneCheckBox"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/answers"
+                android:id="@+id/secondAnswer_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="Manchester United"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- Third question card-->
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cardView"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/questionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 3. Who has more ballons'dor?"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/secondaryText">
+               <RadioGroup
+                   android:id="@+id/radioGroup"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <RadioButton
+                       android:id="@+id/messi_radio_button"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <RadioButton
+                       android:id="@+id/ronaldo_radioButton"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+               </RadioGroup>
+                <TextView
+                    android:id="@+id/messi_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_toRightOf="@+id/radioGroup"
+                    android:text="Messi"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/ron_radio_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/radioGroup"
+                    android:layout_below="@id/messi_textView"
+                    android:text="Ronaldo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:layout_below="@id/ron_radio_txt"
+                    android:layout_toRightOf="@+id/radioGroup"
+                    android:text="Ronaldinho" />
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/thirdAnswer_textView"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="Ronaldo"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- fourth question card-->
+    <android.support.v7.widget.CardView
+        style="@style/questionTitle"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/questionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 4. How many players play in one court?"/>
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:max="30"/>
+            <TextView
+                style="@style/secondaryText"
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""/>
+
+
+            <TextView
+                style="@style/answers"
+                android:id="@+id/fourthAnswer_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="22, 11 on each side duhhaha..."
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <TextView
+              style="@style/answers"
+              android:id="@+id/total_score_textView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Total Score: uhg, complete all questions first please"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:textColor="#FAFAFA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reset"
+                    android:onClick="reset"/>
+                <Button
+                    android:textColor="#FAFAFA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:onClick="checkAnswers"/>
+            </LinearLayout>
+            <Button
+                android:textColor="#FAFAFA"
+                android:id="@+id/showAnswers_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Show Answers"
+                android:visibility="invisible"
+                android:onClick="showAnswers"/>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>
+    </ScrollView>
